@@ -12,6 +12,9 @@
 
 
   window.addEventListener('keyup', function(e) {
+    if(pressed[0] === 'Meta') {
+      pressed.pop();
+    }
     console.log(e.key);
     pressed.push(e.key);
     pressed.splice(6);
