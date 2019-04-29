@@ -7,6 +7,18 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretCode = 'wesbos';
+
+
+  window.addEventListener('keyup', function(e) {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(6);
+    let joined = pressed.join('');
+    console.log(joined);
+
+  })
 </script>
 </body>
 </html>
