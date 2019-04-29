@@ -15,11 +15,12 @@
     if(pressed[0] === 'Meta') {
       pressed.pop();
     }
-    console.log(e.key);
     pressed.push(e.key);
-    pressed.splice(6);
-    let joined = pressed.join('');
-    console.log(joined);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    
+    if(pressed.join('') === secretCode) {
+      console.log('ding ding!');
+    }
 
   })
 </script>
